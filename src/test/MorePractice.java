@@ -5,10 +5,17 @@
 package test;
 
 /**
- * 
+ * Übungsklasse mit Methoden zum Filtern, Umordnen und Verarbeiten von
+ * int-Arrays.
  */
 public class MorePractice
 {
+    /**
+     * Führt die Methoden mit Beispielarrays aus und gibt die Ergebnisse auf der
+     * Konsole aus.
+     *
+     * @param args Kommandozeilenargumente
+     */
     public static void main(String[] args)
     {
         MorePractice a = new MorePractice();
@@ -75,6 +82,14 @@ public class MorePractice
 
     }
 
+    /**
+     * Verschiebt alle Vorkommen des angegebenen Wertes an das Ende eines neuen
+     * Arrays. Die Reihenfolge der übrigen Elemente bleibt erhalten.
+     *
+     * @param arr das zu verarbeitende Array
+     * @param key der ans Ende zu verschiebende Wert
+     * @return ein neues Array mit allen Vorkommen von key am Ende
+     */
     public int[] occurencesToTheEnd(int[] arr, int key)
     {
         int[] reapetTeil = new int[arr.length];
@@ -108,6 +123,13 @@ public class MorePractice
 
     }
 
+    /**
+     * Entfernt alle negativen Zahlen aus dem Array. Null und positive Zahlen
+     * bleiben in ihrer ursprünglichen Reihenfolge.
+     *
+     * @param arr das zu filternde Array
+     * @return ein neues Array ohne negative Zahlen
+     */
     public int[] removeNegative(int[] arr)
     {
         int[] resultTemp = new int[arr.length];
@@ -132,6 +154,13 @@ public class MorePractice
 
     }
 
+    /**
+     * Kopiert jedes Arrayelement zweimal direkt hintereinander in ein neues
+     * Array.
+     *
+     * @param arr das ursprüngliche Array
+     * @return ein neues Array mit der doppelten Länge
+     */
     public int[] elementsAppearTwice(int[] arr)
     {
         int[] resultTemp = new int[arr.length * 2];
@@ -145,6 +174,12 @@ public class MorePractice
 
     }
 
+    /**
+     * Quadriert jedes Element des Arrays.
+     *
+     * @param arr das ursprüngliche Array
+     * @return ein neues Array mit den quadrierten Werten
+     */
     public int[] squreElements(int[] arr)
     {
         int[] result = new int[arr.length];
@@ -155,6 +190,14 @@ public class MorePractice
         return result;
     }
 
+    /**
+     * Sammelt alle Werte, die mindestens zweimal im Array vorkommen. Jeder
+     * dieser Werte wird nur einmal übernommen. Die Reihenfolge ihres ersten
+     * Auftretens bleibt erhalten.
+     *
+     * @param arr das zu untersuchende Array
+     * @return ein neues Array mit den mehrfach vorkommenden Werten
+     */
     public int[] keepDuplicateValue(int[] arr)
     {
         int[] resultTemp = new int[arr.length];
@@ -200,6 +243,15 @@ public class MorePractice
 
     }
 
+    /**
+     * Sammelt alle Werte, die in beiden Arrays vorkommen. Jeder gemeinsame Wert
+     * wird nur einmal übernommen. Die Reihenfolge ihres ersten Auftretens im
+     * ersten Array bleibt erhalten.
+     *
+     * @param arr1 das erste Array
+     * @param arr2 das zweite Array
+     * @return ein neues Array mit den gemeinsamen Werten
+     */
     public int[] keepCommonValues(int[] arr1, int[] arr2)
     {
         int[] resultTemp = new int[arr1.length];
